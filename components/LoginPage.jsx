@@ -13,7 +13,7 @@ export default function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = `https://aditya-foods-phi.vercel.app/api/users/${isRegister ? "register" : "login"}`;
+      const url = `https://aditya-foods-mwti.onrender.com/api/users/${isRegister ? "register" : "login"}`;
       const payload = isRegister ? { name, email, password } : { email, password };
 
       const response = await axios.post(url, payload);

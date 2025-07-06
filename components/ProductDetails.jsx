@@ -57,7 +57,7 @@ const ProductDetails = ({ product, onClose }) => {
       }
 
       const response = await axios.post(
-        "https://aditya-foods-phi.vercel.app/cart/add",
+        "https://aditya-foods-mwti.onrender.com/cart/add",
         {
           productId: product._id,
           quantity: 1,

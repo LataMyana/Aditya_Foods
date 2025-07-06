@@ -35,7 +35,7 @@ export default function Checkout() {
         alert("Please log in to continue");
         return;
       }
-      const response = await axios.get("https://aditya-foods-phi.vercel.app/api/cart", {
+      const response = await axios.get("https://aditya-foods-mwti.onrender.com/api/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCartItems(response.data);
@@ -60,7 +60,7 @@ export default function Checkout() {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "https://aditya-foods-phi.vercel.app/api/orders",
+        "https://aditya-foods-mwti.onrender.com/api/orders",
         { cartItems, address, paymentMethod },
         {
           headers: { Authorization: `Bearer ${token}` },

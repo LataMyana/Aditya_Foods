@@ -10,7 +10,7 @@ const Categories = () => {
   const [allProducts, setAllProducts] = useState([]); // Store all products
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/categories-with-products")
+    fetch("https://aditya-foods-phi.vercel.app/api/categories-with-products")
       .then((response) => response.json())
       .then((data) => {
         setCategories(data);

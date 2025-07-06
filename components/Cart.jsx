@@ -15,7 +15,7 @@ export default function Cart() {
         return;
       }
 
-      const response = await axios.get("http://localhost:3000/api/cart", {
+      const response = await axios.get("https://aditya-foods-phi.vercel.app/api/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -37,7 +37,7 @@ export default function Cart() {
   const handleRemove = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:3000/api/cart/${id}`, {
+      await axios.delete(`https://aditya-foods-phi.vercel.app/api/cart/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCartItems(cartItems.filter((item) => item._id !== id));
@@ -54,7 +54,7 @@ export default function Cart() {
       const newQuantity = Math.max(1, updatedItem.quantity + delta);
 
       await axios.put(
-        `http://localhost:3000/api/cart/${id}`,
+        `https://aditya-foods-phi.vercel.app/api/cart/${id}`,
         { quantity: newQuantity },
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -35,7 +35,7 @@ export default function Checkout() {
         alert("Please log in to continue");
         return;
       }
-      const response = await axios.get("http://localhost:3000/api/cart", {
+      const response = await axios.get("https://aditya-foods-phi.vercel.app/api/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCartItems(response.data);

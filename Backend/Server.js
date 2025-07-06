@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 
 app.use(express.json());
-app.use(cors({ origin: "https://aditya-foods-phi.vercel.app" }));
+app.use(cors({ origin: "http://localhost:5173" }));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {

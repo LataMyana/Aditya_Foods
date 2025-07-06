@@ -60,7 +60,7 @@ export default function Checkout() {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "http://localhost:3000/api/orders",
+        "https://aditya-foods-phi.vercel.app/api/orders",
         { cartItems, address, paymentMethod },
         {
           headers: { Authorization: `Bearer ${token}` },
